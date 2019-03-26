@@ -1,6 +1,8 @@
-## **Classe para representar tempo**
+# **Classe para representar tempo**
 
-# **Projeto inicial**
+![Relógio](https://media.giphy.com/media/uoUOxJRxmMcyk/giphy.gif)
+
+## **Projeto inicial**
 
 - Crie uma classe para representar tempo em termos de hora, minutos
 e segundos
@@ -14,6 +16,7 @@ então deve-se criar objeto com 00:00:00
 
 - Método chamado toString() que deverá retornar o tempo como
 String. Ex: 07:30:00
+
 - Métodos para alterar hora, minuto ou segundo
 Deve-se retornar true se o valor for alterado com sucesso, false caso
 contrário
