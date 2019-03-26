@@ -1,6 +1,8 @@
-## **Classe para representar tempo**
+# **Classe para representar tempo**
 
-# **Projeto inicial**
+![Relógio](https://media.giphy.com/media/uoUOxJRxmMcyk/giphy.gif)
+
+## **Projeto inicial**
 
 - Crie uma classe para representar tempo em termos de hora, minutos
 e segundos
