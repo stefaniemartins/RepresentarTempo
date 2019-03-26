@@ -9,26 +9,65 @@ public class Tempo
 
     public Tempo()
     {
-        horas = 00;
-        minutos = 00;
-        segundos = 00;
+        horas = 0; //Só guarda 0 porque como é int ele ignora os zeros a esquerda. Na hora de imprimir em String deve ser impresso 00.
+        minutos = 0;
+        segundos = 0;
     }
 
     public Tempo(int horas)
     {
-        this.horas = horas;
+        setHoras(horas);
     }
 
     public Tempo(int horas, int minutos)
     {
-        this.horas = horas;
-        this.minutos = minutos;
+        setHoras(horas);
+        setMinutos(minutos);
     }
 
     public Tempo(int horas, int minutos, int segundos)
     {
-        this.horas = horas;
-        this.minutos = minutos;
-        this.segundos = segundos;
+        setHoras(horas);
+        setMinutos(minutos);
+        setSegundos(segundos);
+    }
+
+    public void setHoras(int horas)
+    {
+        if ((horas < 0) || (horas > 24))
+        {
+            horas = 0;
+        }
+
+        else
+        {
+            this.horas = horas;
+        }
+    }
+
+    public void setMinutos(int minutos)
+    {
+        if ((minutos < 0) || (minutos > 59))
+        {
+            minutos = 0;
+        }
+
+        else
+        {
+            this.minutos = minutos;
+        }
+    }
+
+    public void setSegundos(int segundos)
+    {
+        if ((segundos < 0) || (segundos > 59))
+        {
+            segundos = 0;
+        }
+
+        else
+        {
+            this.segundos = segundos;
+        }
     }
 }
