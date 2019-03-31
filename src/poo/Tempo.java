@@ -5,6 +5,7 @@ public class Tempo
     private int horas;
     private int minutos;
     private int segundos;
+    private String horario;
 
 
     public Tempo()
@@ -32,42 +33,105 @@ public class Tempo
         setSegundos(segundos);
     }
 
-    public void setHoras(int horas)
+    public boolean setHoras(int horas)
     {
-        if ((horas < 0) || (horas > 24))
+        if ((horas < 0) || (horas > 23))
         {
             horas = 0;
+            return false;
         }
 
         else
         {
             this.horas = horas;
+            return true;
         }
     }
 
-    public void setMinutos(int minutos)
+    public boolean setMinutos(int minutos)
     {
         if ((minutos < 0) || (minutos > 59))
         {
             minutos = 0;
+            return false;
         }
 
         else
         {
             this.minutos = minutos;
+            return true;
         }
     }
 
-    public void setSegundos(int segundos)
+    public boolean setSegundos(int segundos)
     {
         if ((segundos < 0) || (segundos > 59))
         {
             segundos = 0;
+            return false;
         }
 
         else
         {
             this.segundos = segundos;
+            return true;
         }
+    }
+
+    public int getHoras()
+    {
+            return horas;
+    }
+
+    public int getMinutos()
+    {
+        return minutos;
+    }
+
+    public int getSegundos()
+    {
+        return segundos;
+    }
+
+    @Override
+    public String toString()
+    {
+        if (minutos < 10)
+        {
+            if (segundos < 10)
+            {
+                horario = ":0" + minutos + ":0" + segundos;
+            }
+
+            else
+            {
+                horario = ":0" + minutos + ":" + segundos;
+            }
+        }
+
+        else
+        {
+            if (segundos < 10)
+            {
+                horario = ":0" + minutos + ":0" + segundos;
+            }
+
+            else
+            {
+                horario = ":" + minutos + ":" + segundos;
+            }
+        }
+
+        if (horas < 10)
+        {
+            horario = "0" + horas + horario;
+        }
+
+        if (horas >= 10)
+        {
+            horario = horas + horario;
+        }
+
+        return horario;
     }
 }
