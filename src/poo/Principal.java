@@ -8,22 +8,24 @@ public class Principal
     {
         Tempo tempo = new Tempo();
 
-        int hora, minuto, segundo;
+        int hora_t1, minuto_t1, segundo_t1;
 
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Digite as horas: ");
-        hora = teclado.nextInt();
-        tempo.setHoras(hora);
+        System.out.println("Digite as horas do tempo 1: ");
+        hora_t1 = teclado.nextInt();
+        tempo.setHoras(hora_t1);
 
-        System.out.println("Digite os minutos: ");
-        minuto = teclado.nextInt();
-        tempo.setMinutos(minuto);
+        System.out.println("Digite os minutos do tempo 1: ");
+        minuto_t1 = teclado.nextInt();
+        tempo.setMinutos(minuto_t1);
 
-        System.out.println("Digite os segundos: ");
-        segundo = teclado.nextInt();
-        tempo.setSegundos(segundo);
+        System.out.println("Digite os segundos do tempo 1: ");
+        segundo_t1 = teclado.nextInt();
+        tempo.setSegundos(segundo_t1);
 
         System.out.println(tempo.toString());
+
+        System.out.println("\nHoráio informado em segundos: " + tempo.getHorario_segundos());
     }
 }

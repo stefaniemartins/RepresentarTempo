@@ -6,6 +6,7 @@ public class Tempo
     private int minutos;
     private int segundos;
     private String horario;
+    private long horario_segundos;
 
 
     public Tempo()
@@ -133,5 +134,14 @@ public class Tempo
         }
 
         return horario;
+    }
+
+    public long getHorario_segundos()
+    {
+        horario_segundos = segundos;
+        horario_segundos = horario_segundos + (minutos * 60);
+        horario_segundos = horario_segundos + (horas * 3600);
+
+        return horario_segundos;
     }
 }
