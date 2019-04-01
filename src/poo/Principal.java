@@ -26,6 +26,8 @@ public class Principal
 
         System.out.println(tempo.toString());
 
-        System.out.println("\nHoráio informado em segundos: " + tempo.getHorario_segundos());
+        System.out.println("\nTempo 1 informado em segundos: " + tempo.getHorario_segundos());
+
+        System.out.println("\nDiferença entre os tempos: " + tempo.getDiferençaEntreTempos(1,10,10) + " segundos.");
     }
 }

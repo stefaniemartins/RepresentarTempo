@@ -12,6 +12,7 @@ public class Tempo
     private int segundos;
     private String horario;
     private long horario_segundos;
+    private long diferença;
 
     /**
      * Construtor que não recebe parâmetro.
@@ -202,5 +203,24 @@ public class Tempo
         horario_segundos = horario_segundos + (horas * 3600);
 
         return horario_segundos;
+    }
+
+    /**
+     * Método obtém a diferença entre os dois tempos informados, em segundos.
+     * @param hora2 recebe a hora do tempo 2.
+     * @param minuto2 recebe o minuto do tempo 2.
+     * @param segundo2 recebe o segundo do tempo 2.
+     * @return subtrai o tempo 2 do tempo 1 e retorna a diferença em segundos.
+     */
+    public long getDiferençaEntreTempos(int hora2, int minuto2, int segundo2)
+    {
+        long aux;
+        aux = hora2 * 3600;
+        aux = aux + (minuto2 * 60);
+        aux = aux + segundo2;
+
+        diferença = horario_segundos - aux;
+
+        return diferença;
     }
 }
